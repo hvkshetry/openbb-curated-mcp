@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a modified version of the OpenBB MCP server that loads only a curated set of 60 essential financial tools, reducing context consumption by ~67% (from 184 to 60 tools). All tools use free data sources (FRED, yfinance, SEC, FINRA, ECB, OECD) or FMP with the configured API key.
+This is a modified version of the OpenBB MCP server that loads only a curated set of 65 essential financial tools, reducing context consumption by ~65% (from 184 to 65 tools). All tools use free data sources (FRED, yfinance, SEC, FINRA, ECB, OECD, IMF, EconDB) or FMP with the configured API key.
 
 ## Changes Made
 
@@ -36,15 +36,21 @@ To avoid token limit errors, these tools MUST include date parameters:
 - `fixedincome_spreads_tcm` - Treasury constant maturity spreads
 - Use `economy_fred_series` to calculate custom risk premiums
 
-## Curated Tools (60 total)
+## Curated Tools (65 total)
 
-### Economy (15 tools)
+### Economy (20 tools)
 - GDP: real, nominal, forecast
 - Inflation: CPI, retail prices, house price index
 - Rates: interest rates (unified function)
 - Employment & Trade: unemployment, balance of payments, nonfarm payrolls
 - Data Access: FRED series/search, BLS series/search
 - Indicators: composite leading indicator
+- **Trade & International Analysis (5 new tools)**:
+  - Direction of Trade: Bilateral merchandise trade flows (IMF)
+  - Export Destinations: Top export partners by country (EconDB)
+  - Economic Indicators: International reserves, financial soundness (IMF/EconDB)
+  - Country Profile: Comprehensive economic overview (EconDB)
+  - Port Volume: Shipping volumes as trade flow indicators (EconDB/IMF)
 
 ### Equity (19 tools)
 - Search & Quotes: search, price quote, historical, performance
@@ -108,10 +114,22 @@ Note: While FRED and BLS are free public services, they still require API keys f
 
 ## Benefits
 
-- **67% reduction in context usage**: Only 60 tools instead of 184
-- **Focused on free data sources**: yfinance, FRED, SEC, FINRA
+- **65% reduction in context usage**: Only 65 tools instead of 184
+- **Focused on free data sources**: yfinance, FRED, SEC, FINRA, IMF, EconDB
 - **No dynamic tool management**: Consistent, predictable tool availability
 - **Optimized for investment analysis**: All essential tools included
+- **Trade analysis capabilities**: Monitor deglobalization and tariff impacts
+
+## Trade Analysis Capabilities
+
+The 5 new trade tools enable monitoring of:
+- **Trade relationship shifts**: Track bilateral flows between specific countries
+- **Supply chain vulnerabilities**: Identify export dependencies and concentration
+- **Early warning indicators**: Port congestion and dwelling times signal disruptions
+- **Financial stability**: Monitor international reserves and soundness indicators
+- **Portfolio exposure**: Assess which trade corridors affect your investments
+
+These tools are essential for investment advisory in an era of increasing trade tensions, tariffs, and supply chain restructuring.
 
 ## Notes
 

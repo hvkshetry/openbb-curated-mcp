@@ -1,6 +1,6 @@
 """Curated list of OpenBB tools for MCP server.
 
-This module defines a fixed set of 60 essential tools that provide comprehensive
+This module defines a fixed set of 65 essential tools that provide comprehensive
 financial analysis capabilities while minimizing context consumption.
 
 IMPORTANT NOTES:
@@ -32,7 +32,7 @@ IMPORTANT NOTES:
 
 # Immutable set of curated tools - these are the ONLY tools that will be available
 CURATED_TOOLS = frozenset({
-    # Economy Tools (15 tools - all working with proper parameters)
+    # Economy Tools (20 tools - all working with proper parameters)
     # GDP & Growth
     "economy_gdp_real",
     "economy_gdp_nominal", 
@@ -59,6 +59,13 @@ CURATED_TOOLS = frozenset({
     
     # Leading Indicators
     "economy_composite_leading_indicator",
+    
+    # Trade & International Analysis (5 new tools)
+    "economy_direction_of_trade",  # Bilateral trade flows (IMF)
+    "economy_export_destinations",  # Top export partners (EconDB)
+    "economy_indicators",  # IMF/EconDB indicators including reserves
+    "economy_country_profile",  # Country economic overview (EconDB)
+    "economy_port_volume",  # Port volumes & dwelling times (EconDB/IMF)
     
     # Equity Tools (17 tools - mix of working and free alternatives)
     # Search & Quotes

@@ -26,7 +26,7 @@ IMPORTANT NOTES:
 - New wealth management tools added (10 tools):
   * ETF portfolio analysis: sectors, countries, equity_exposure (FMP provider)
   * Fixed income indices: bond_indices, mortgage_indices (FRED provider)
-  * Equity screening: gainers, undervalued_large_caps, growth_tech_equities (YFinance)
+  * Equity screening: gainers, undervalued_large_caps, growth_tech (YFinance)
   * Alternative markets: futures_curve (YFinance), crypto_price_historical (YFinance/FMP)
 """
 
@@ -90,7 +90,7 @@ CURATED_TOOLS = frozenset({
     # New discovery/screening tools (YFinance provider)
     "equity_discovery_gainers",  # Top gaining stocks
     "equity_discovery_undervalued_large_caps",  # Value screening
-    "equity_discovery_growth_tech_equities",  # Growth stock screening
+    "equity_discovery_growth_tech",  # Growth stock screening
     
     # Ownership Data (using free alternatives)
     "equity_ownership_insider_trading",

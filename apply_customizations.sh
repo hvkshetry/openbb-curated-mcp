@@ -6,7 +6,7 @@ echo "OpenBB MCP Server Customization Script"
 echo "======================================"
 
 # Find the OpenBB MCP server installation
-SITE_PACKAGES=$(python -c "import site; print(site.getsitepackages()[0])")
+SITE_PACKAGES=$(python3 -c "import site; print(site.getsitepackages()[0])")
 OPENBB_MCP_PATH="$SITE_PACKAGES/openbb_mcp_server"
 
 if [ ! -d "$OPENBB_MCP_PATH" ]; then

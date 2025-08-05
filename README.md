@@ -56,7 +56,7 @@ To avoid token limit errors, these tools MUST include date parameters:
 - Search & Quotes: search, price quote, historical, performance
 - Fundamentals: balance, income, cash, dividends, metrics, multiples, trailing dividend yield
 - Research: profile, estimates consensus, discovery filings
-- Screening: discovery gainers, undervalued large caps, growth tech equities
+- Screening: discovery gainers, undervalued large caps, growth tech
 - Ownership: insider trading, form 13F
 
 ### Fixed Income (6 tools)
